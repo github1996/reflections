@@ -1,0 +1,51 @@
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+Pin point errors, correct them. Typographical errors can be identified and corrected.
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+Easy to coordinate, get somebody upto par - the neophyte can just see the course of development
+of the project and get acquainted quickly. View older versions and revert to a stable, error-free
+older version if the need arises.
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+Pros - you introduce a new bug while makiing changes and can revert back to older
+stable version, one commit per logical change for eg., 1 commit for each bug fix or 
+for each logical change. If time based or content based auto commits are used,  there
+would be no logical correlation within each commit.
+
+Cons - progress might be lost if u forget to commit, lose power in between. Manual error like
+commiting too often cluttering commit log or too infrequently sabotaging the logical correlation 
+between subsequent versions.
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+Catering to requisite need, google docs deals with text based modifications which are done on 1
+file at a time and can be synced automatically as the changes are being done
+However, in code adding or changing a particular feature might require simultaneous changes
+to many files. For example HTML and CSS go hand in hand.
+
+How can you use the commands git log and git diff to view the history of files?
+
+git log -> log of all commits
+git log --stat -> which files were effected in the commit
+git diff -> compare two commits(using their ids) to find changes made 
+
+How might using version control make you more confident to make changes that
+could break something?
+
+We can use git checkout to temporarily revert to any stable version. This helps us to compare subsequent 
+commits and find out if any bugs were introduces. By looking at the lines of code deleted or added in each
+commit we can identify any bug that was introduced. Explore pretty significant changes in the 
+code base without fear that the project might break (become too buggy to resurrect).
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+I am learning git so that I can start contributing to open source. Also, all the projects that I work on
+this time I am planning to do properly using git.
