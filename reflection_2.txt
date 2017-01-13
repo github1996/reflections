@@ -1,4 +1,4 @@
-What happens when you initialize a repository? Why do you need to do it?
+﻿What happens when you initialize a repository? Why do you need to do it?
 
 git init used to initialize a repository. .git file associated with the correspoding repository.
 A normal directory becomes a git repository by calling "git init" command. Metadata associated
@@ -14,15 +14,37 @@ command to add stuff from working directiry to the staging area to be commited.
 How can you use the staging area to make sure you have one commit per logical
 change?
 
-
+Add the files which correspond to one logical modification to the staging area. This
+can be a subset of all the modified files in the working directory. Commit the staging
+area. Then out of the remaining modified files, repeat the same procedure clubbing 
+together reqisite files together in 1 staging area and commiting them. This ensures
+"one commit per logical change" even though one might have many modified files in the
+working directory corresponding to multiple logical changes.
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
+Branches would help to try out experimental features, develop experimental new 
+versions. If the feature is worth keeping it can be merged with the master branch
+or discarded otherwise. This does not disrupt the work flow in the master branch.
+Master branch can be separate as like the production quality branch that never breaks.
+Ability to compartmentalize work and switch between different features.
+
 How do the diagrams help you visualize the branch structure?
+
+View the different branches as edges in a graph. Easy to keep track of which branch contains
+which commits using diagrams.
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
+Merging two branches leads two merging of the different files of each commit. The common code is
+retained along with the additions made by each. However, if there are sections which are modified
+by the two commits differently, it results in a merge conflict.
+
 What are the pros and cons of Git’s automatic merging vs. always doing merges
 manually?
+
+Always merging maually can be tedious, automatic merging in obvious scenarios is good. However,
+if git guesses each time which type of code to keep it can lead to uncompilable code in the 
+merged commit.
