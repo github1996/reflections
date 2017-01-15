@@ -1,13 +1,22 @@
 When would you want to use a remote repository rather than keeping all your work
 local?
 
-    Fill in your answer here
+A remote repository is useful to collaborate with others on the same project.
+Also you can work on the same projects from different machines. Different people 
+can work independently on the same project and collaborate using the remote
+repository. Also, if the local machine crashes, your work would be safely 
+backed up in the remote repository.
 
 Why might you want to always pull changes manually rather than having Git
 automatically stay up-to-date with your remote repository?
 
-    Fill in your answer here
-
+If changes were automatically pulled from remote repository, changes made by 
+other people might conflict with the work you might have been doing on the same
+project. It will become highly confusing and distracting if the code of the project
+you are working on keeps on updating automatically from time to time.
+Instead, gitHub allows you to pull the changes so that you can work at your own 
+pace and collaborate when you are done with your part.
+ 
 Describe the differences between forks, clones, and branches.  When would you
 use one instead of another?
 
